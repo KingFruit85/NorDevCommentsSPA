@@ -1,38 +1,145 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #36393f;
+  color: #dcddde;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.search-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #40444b;
+  color: #dcddde;
+  font-size: 16px;
+}
+
+.search-input::placeholder {
+  color: #72767d;
+}
+
+.message-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #2f3136;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-header {
+  margin-bottom: 5px;
+}
+
+.username {
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #72767d;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.message-image-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.message-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 5px;
+}
+
+.quoted-message {
+  background-color: #2f3136;
+  border-left: 4px solid #4f545c;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.quoted-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.quoted-author {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.quoted-text {
+  margin-top: 5px;
+}
+
+.vote-count {
+  font-size: 0.9em;
+  color: #72767d;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #7289da;
+  border: none;
   color: white;
+  padding: 10px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button:disabled {
+  background-color: #4f545c;
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination span {
+  color: #dcddde;
+  font-size: 16px;
 }
