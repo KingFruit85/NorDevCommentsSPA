@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# Nor(Dev)Comments bot - All Comments!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based web application that mimics a Discord-like message board. It features message display with pagination, filtering, and sorting capabilities.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Display messages in a Discord-like format
+- Pagination for easy navigation through messages
+- Search functionality to filter messages
+- Sorting messages by vote count
+- Display of images attached to messages
+- Responsive design
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (v14 or later recommended)
+- npm (comes with Node.js)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/your-repo-name.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
+   ```
+   cd your-repo-name
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Create a `.env` file in the root directory and add:
+   ```
+   REACT_APP_USE_LOCAL_DATA=true
+   ```
+   Set to `false` if you want to use the API instead of local data.
 
-### `npm run eject`
+5. Start the development server:
+   ```
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Use the search bar to filter messages by content or username.
+- Navigate through pages using the pagination controls at the bottom of the page.
+- Messages are automatically sorted by vote count in descending order.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Deployment
 
-## Learn More
+This project is set up for easy deployment to Netlify. Just connect your GitHub repository to Netlify, and it will automatically deploy when you push changes to your main branch.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React](https://reactjs.org/) - The web framework used
+- [TypeScript](https://www.typescriptlang.org/) - For type-safe code
+- [CSS Modules](https://github.com/css-modules/css-modules) - For component-scoped CSS
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+- Inspired by Discord's user interface
+- Thanks to all the members of the Nor(Dev) discord community for all the laughs over the years.
