@@ -38,11 +38,11 @@ const MessageComponent: React.FC<MessageProps> = ({ message }) => {
                 {message.quotedMessageAuthor}
               </span>
               <div className="quoted-text">{message.quotedMessage}</div>
-              {message.s3ImageUrl && (
+              {message.s3QuotedMessageImageUrl && (
                 <div className="message-image-container">
                   <img
                     src={message.s3QuotedMessageImageUrl}
-                    alt="Message attachment"
+                    alt="Quoted Message attachment"
                     className="message-image"
                   />
                 </div>
