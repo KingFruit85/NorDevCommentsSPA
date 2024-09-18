@@ -17,10 +17,10 @@ const MessageComponent: React.FC<MessageProps> = ({ message }) => {
           </span>
         </div>
         <div className="comment">{message.comment}</div>
-        {message.imageUrl && (
+        {message.s3ImageUrl && (
           <div className="message-image-container">
             <img
-              src={message.imageUrl}
+              src={message.s3ImageUrl}
               alt="Message attachment"
               className="message-image"
             />

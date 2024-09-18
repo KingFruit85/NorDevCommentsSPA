@@ -92,11 +92,6 @@ const App: React.FC = () => {
           className="search-input"
         />
       </div>
-      <div className="message-list">
-        {paginatedMessages.map((message) => (
-          <MessageComponent key={message.messageId} message={message} />
-        ))}
-      </div>
       <div className="pagination">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
@@ -113,6 +108,11 @@ const App: React.FC = () => {
         >
           Next
         </button>
+      </div>
+      <div className="message-list">
+        {paginatedMessages.map((message) => (
+          <MessageComponent key={message.messageId} message={message} />
+        ))}
       </div>
     </div>
   );

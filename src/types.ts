@@ -18,11 +18,11 @@ export interface Message {
   iconUrl: string;
   dateOfSubmission: string;
   voters: string[];
-  imageUrl: string;
+  s3ImageUrl: string;
   quotedMessage: string;
   quotedMessageAuthor: string;
   quotedMessageAvatarLink: string;
-  quotedMessageImage: string;
+  s3QuotedMessageImageUrl: string;
   nickname: string;
   quotedMessageAuthorNickname: string;
   quotedMessageMessageLink: string | null;
