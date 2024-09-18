@@ -81,7 +81,11 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Nor(Dev)Comments bot - All Comments!</h1>
+        <h1>
+          Nor(<span className="red-text">Dev</span>)Comments bot - All nominated
+          Comments!*
+        </h1>
+        <h5>*minus a few images and some formatting issues</h5>
       </header>
       <div className="controls">
         <input
