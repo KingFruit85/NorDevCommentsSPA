@@ -20,7 +20,7 @@ const App: React.FC = () => {
       try {
         if (USE_LOCAL_DATA) {
           await new Promise((resolve) => setTimeout(resolve, 500));
-          setMessages(sampleMessages as Message[]);
+          setMessages(sampleMessages as unknown as Message[]);
         } else {
           const response = await fetch(API_URL);
           if (!response.ok) {
