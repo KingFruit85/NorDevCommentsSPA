@@ -6,8 +6,12 @@ interface MessageProps {
 }
 
 const MessageComponent: React.FC<MessageProps> = ({ message }) => {
+  const handleClick = () => {
+    window.location.href = message.messageLink;
+  };
+
   return (
-    <div className="message">
+    <div className="message" onClick={handleClick}>
       <img src={message.iconUrl} alt={message.userName} className="avatar" />
       <div className="message-content">
         <div className="message-header">
@@ -19,11 +23,14 @@ const MessageComponent: React.FC<MessageProps> = ({ message }) => {
         <div className="comment">{message.comment}</div>
         {message.s3ImageUrl && (
           <div className="message-image-container">
-            <img
-              src={message.s3ImageUrl}
-              alt="Message attachment"
-              className="message-image"
-            />
+            {message.s3ImageUrl.split(",").map((url, index) => (
+              <img
+                key={index}
+                src={url.trim()}
+                alt={`Message attachment ${index + 1}`}
+                className="message-image"
+              />
+            ))}
           </div>
         )}
         {message.quotedMessage && (
@@ -40,17 +47,29 @@ const MessageComponent: React.FC<MessageProps> = ({ message }) => {
               <div className="quoted-text">{message.quotedMessage}</div>
               {message.s3QuotedMessageImageUrl && (
                 <div className="message-image-container">
-                  <img
-                    src={message.s3QuotedMessageImageUrl}
-                    alt="Quoted Message attachment"
-                    className="message-image"
-                  />
+                  {message.s3QuotedMessageImageUrl
+                    .split(",")
+                    .map((url, index) => (
+                      <img
+                        key={index}
+                        src={url.trim()}
+                        alt={`Quoted Message attachment ${index + 1}`}
+                        className="message-image"
+                      />
+                    ))}
                 </div>
               )}
             </div>
           </div>
         )}
-        <div className="vote-count">Votes: {message.voteCount}</div>
+        <div className="vote-count">
+          Votes: {message.voteCount}
+          <div className="voters-list">
+            {message.voters.map((voter, index) => (
+              <div key={index}>{voter}</div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -148,3 +148,26 @@
 .red-text {
   color: red;
 }
+
+.message:active {
+  transform: scale(0.98);
+}
+
+.vote-count {
+  position: relative;
+  color: #f2b408;
+}
+
+.vote-count:hover .voters-list {
+  display: block;
+}
+
+.voters-list {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
