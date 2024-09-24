@@ -4,7 +4,13 @@ import MessageComponent from "./components/MessageComponent";
 import "./App.css";
 import sampleMessages from "./sampleMessages.json";
 
-const API_URL = "https://nordevcommentsbackend.fly.dev/api/messages/";
+const guildIdFromUrlParam = new URLSearchParams(window.location.search).get(
+  "guildId"
+);
+
+const API_URL =
+  "https://nordevcommentsbackend.fly.dev/api/messages?guildId=" +
+  guildIdFromUrlParam;
 const USE_LOCAL_DATA = process.env.REACT_APP_USE_LOCAL_DATA === "true";
 const ITEMS_PER_PAGE = 15;
 
